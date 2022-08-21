@@ -1,3 +1,6 @@
+# Mod by Milk_Cool
+This little mod allows you to change the game difficulty - change the value in the file `public/desktop/index.js` at line `26`. The default value is `1`.
+
 # HVBRD (v2 with web sockets)
 
 Interactive hoverboard experiment using a mobile phone and web sockets.
