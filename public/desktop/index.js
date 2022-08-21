@@ -21,6 +21,10 @@ var zOrientation = 0;
 var sound;
 var glitchPass, composer;
 
+// This defines game speed, max amount of cubes and chance of a cube to spawn (per frame, I guess).
+// This little mod was made by Milk_Cool
+var difficulty = 1;
+
 setup();
 init();
 draw();
@@ -237,7 +241,7 @@ function update() {
 		composer.addPass( glitchPass );
 	}
 
-	if (Math.random() < 0.03 && cubes.length < 10) {
+	if (Math.random() < 0.03 * difficulty && cubes.length < 10 * difficulty) {
 		makeRandomCube();
 	}
 
@@ -250,7 +254,7 @@ function update() {
 				score += 1;
 			//}
 		} else {
-			cubes[i].position.y -= 0.05;
+			cubes[i].position.y -= 0.05 * difficulty;
 		}
 	}
 	scoreText.innerText = "Score:" + Math.floor(score);
